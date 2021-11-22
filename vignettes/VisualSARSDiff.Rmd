@@ -1,0 +1,27 @@
+---
+title: "VisualSARSDiff"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{VisualSARSDiff}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+There are 2 preinstalled proteins already: MERS And Covid. Let's say we just want a comparison score
+
+library("VisualSARSDiff")
+pairwiseSpike("COVID-19", "MERS", TRUE)
+
+Hmm... let's say we want a bit more. Let's change the TRUE to a FALSE to see in much more detail!
+
+library("VisualSARSDiff")
+pairwiseSpike("COVID-19", "MERS", FALSE)
+
+There we go!
