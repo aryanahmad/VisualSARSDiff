@@ -1,3 +1,20 @@
+---
+title="VSD"
+output: github_document
+title: VisualSARSDiff
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%",
+  title = "VisualSARSDiff"
+)
+```
 
 # VisualSARSDiff
 
@@ -19,7 +36,6 @@ You can install the development version of VisualSARSDiff like so:
 require("devtools")
 devtools::install_github("aryanahmad/VisualSARSDiff", build_vignettes=TRUE)
 library("VisualSARSDiff")
-
 
 ##NOTE: Shiny app under construction
 
