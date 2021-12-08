@@ -7,6 +7,7 @@ createProteinInteractionGraph <- function(){
   #TODO: Include information about database and citation
   #TODO: get custom queries
 
+  #Get the required data
   proteinDataCleaned <- getProteinInteractionData()
 
   #Prepare the graph

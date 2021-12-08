@@ -27,3 +27,4 @@ pairwiseSpike <- function(spike1, spike2, scoreCheck) {
 
   pairwiseAlignment(spike1String, spike2String, scoreOnly = scoreCheck)
 }
+
