@@ -10,13 +10,18 @@ createProteinInteractionGraph <- function(){
   proteinDataCleaned <- getProteinInteractionData()
 
   #Prepare the graph
-  graphEdges <- c()
-  for(i in seq(from=1,to=nrow(proteinDataCleaned),by=2)){
-    graphEdges[i] <- proteinDataCleaned$IDs_interactor_A[i]
-    graphEdges[i+1] <- proteinDataCleaned$IDs_interactor_B[i]
+  from <- c()
+  to <- c()
+  for(i in seq(from=1,to=nrow(proteinDataCleaned),by=1)){
+    from[i] <- proteinDataCleaned$IDs_interactor_A[i]
+    to[i] <- proteinDataCleaned$IDs_interactor_B[i]
   }
-  proteinInteractionGraph <- graph(edges=graphEdges,directed=F)
-  plot(proteinInteractionGraph, mode="circle")
+  graphFrame <- data.frame(from, to)
+
+  #Plot the SINGULAR Protein-Protein Interaction Graph
+  proteinInteractionGraph <- graph_from_data_frame(d=graphFrame,directed=F)
+  degreePerNode <- degree(proteinInteractionGraph, mode="all")
+  plot(proteinInteractionGraph, layout=layout.random, vertex.label.cex=c(0.25,0.25,0.25))
 
 }
 
