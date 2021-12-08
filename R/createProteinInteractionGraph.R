@@ -1,14 +1,14 @@
 
 #libraries added: igraph and PItools
 #TODO: Examples
-createProteinInteractionGraph <- function(){
+createProteinInteractionGraph <- function(proteinId){
   #TODO: error handling
   #Get data from the database
   #TODO: Include information about database and citation
   #TODO: get custom queries
 
   #Get the required data
-  proteinDataCleaned <- getProteinInteractionData()
+  proteinDataCleaned <- getProteinInteractionData(proteinId)
 
   #Prepare the graph
   from <- c()
@@ -26,14 +26,17 @@ createProteinInteractionGraph <- function(){
 
 }
 
-getProteinInteractionData <- function(){
+getProteinInteractionData <- function(proteinId){
   #TODO: error handling
   #Get data from the database
   #TODO: Include information about database and citation
-  #TODO: get custom queries
 
-  #Get data
-  allData <- queryPSICQUICrlib(query = "id:P0DTC2*", format = "tab25",
+  #Build Query
+  queryProtein <- paste("id:", proteinId, sep="")
+  queryFinal <- paste(queryProtein, "*", sep="")
+
+  #Call data
+  allData <- queryPSICQUICrlib(query = queryFinal, format = "tab25",
                                database = "imex", directory = "./")
 
   #Clean Data, Attach to dataframe, and get rid of rows we do not need
