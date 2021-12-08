@@ -12,16 +12,62 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+
 ```
 
-There are 2 preinstalled proteins already: MERS And Covid. Let's say we just want a comparison score
+```{r setup}
+library(VisualSARSDiff)
+```
+## Introduction
 
-library("VisualSARSDiff")
-pairwiseSpike("COVID-19", "MERS", TRUE)
+Protein-Protein interactions are one of the most important sub-cellular functions in nature. Because of them, many life-saving vaccines and other important breakthroughs in the medical field have become possible. With lots of databases having much information on them, it is important to ensure that all protein-protein interactions can be easily seen and visualized when starting research.
 
-Hmm... let's say we want a bit more. Let's change the TRUE to a FALSE to see in much more detail!
 
-library("VisualSARSDiff")
-pairwiseSpike("COVID-19", "MERS", FALSE)
+## About this Package
 
-There we go!
+VisualSARSDiff is a package that allows you to model and compare Protein-Protein Interactions. Proteins Interactions can be gotten from the intAct database, as long as you have one or more UNIPROT Protein IDs. With the IDs, you can get raw Protein-Protein Interaction data that can be used in independent studies, a Protein-Protein interaction graph, as well as comparing 2 different proteins and seeing if they have any overlap with regard to proteins they interact with in a easy, graphical way. What started off as an idea with only comparing different corona virus sequences, such as MERS and SARS-CoV-2 expanded to something so much more. While still retaining default functionality to compare your proteinID  to the SARS-CoV-2 Spike protein, lots of custom functionality has been added so that you are able to easily and accurately compare different protein interactions. 
+
+
+## Available Functions
+
+VisualSARSDiff has 3 main functions:
+
+* `createProteinInteractionGraph()`
+    * Taking in a proteinID, this returns a beautiful and easy to read Protein Interaction graph oulining proteins that proteinID                interacts with.
+* `getProteinInteractionData()`
+    * Gives you raw interaction data straight from the intAct database. Contains original databases, and combinations of matched     ProteinIds.   
+* `compareProteinInteractions()`
+    * Given 2 proteinIDs, this returns a Venn Diagram that lets the reader if there are any overlapping proteins that both proteinIds end up interacting with. 
+    
+
+## Examples 
+
+### Creating a Protein Interaction Graph
+
+```{r}
+library(VisualSARSDiff)
+#Create a Protein Interaction Graph of the spike protein of SARS-CoV-2
+createProteinInteractionGraph("P0DTC2")
+
+```
+
+### Getting raw Protein Interaction Data
+
+```{r}
+library(VisualSARSDiff)
+#Create raw data straight from the intAct database - intended for independent research use
+getProteinInteractionData("P0DTC2")
+
+```
+
+### Compare and see if 2 different proteins interact with similar proteins
+
+```{r}
+library(VisualSARSDiff)
+#Seeing if the SARS-CoV-2 Spike protein and a Angiotensin-converting enzyme of a little brown bat have interactons
+compareProteinInteractions("P0DTC2","G1PXH7")
+
+#Note that these 2 are the same - as if you do not include a second paramter, it defaults to the spike protein mentioned
+compareProteinInteractions("P0DTC2","G1PXH7")
+
+```
