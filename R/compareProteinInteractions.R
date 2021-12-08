@@ -2,8 +2,15 @@
 
 compareProteinInteractions <- function(proteinOneID, proteinTwoID = NULL){
   #Get Needed Data
-  #If the second protein isn't given, compare to COVID-19 Spike Protein
 
+  if(proteinOneID == proteinTwoID){
+    stop("You are comparing the same protein!")
+  }
+  if(is.null(proteinOneID)){
+    stop("You must enter at least one protein ID")
+  }
+
+  #If the second protein isn't given, compare to COVID-19 Spike Protein
   proteinOneData <- getProteinInteractionData(proteinOneID)
   if(is.null(proteinTwoID)){
     proteinTwoData <- getProteinInteractionData("P0DTC2")
@@ -15,7 +22,8 @@ compareProteinInteractions <- function(proteinOneID, proteinTwoID = NULL){
 
   proteinOneInteractors <- getUniqueProteins(proteinData = proteinOneData)
   proteinTwoInteractors <- getUniqueProteins(proteinData = proteinTwoData)
-  graphData <- list(proteinOneInteractors, proteinTwoInteractors)
+  graphData <- list(A = proteinOneInteractors,
+                    B = proteinTwoInteractors)
 
   #graph this data frame
 
@@ -27,11 +35,22 @@ compareProteinInteractions <- function(proteinOneID, proteinTwoID = NULL){
 #Helper function
 getUniqueProteins <- function(proteinData){
 
+  if(is.null(proteinData)){
+    stop("Please enter a dataframe directly from the getProteinInteraction
+         Data() function")
+  }
+
   proteinDataA <- c()
   proteinDataB <- c()
-  uniqueA <- unique(proteinData$IDs_interactor_A)
-  uniqueB <- unique(proteinData$IDs_interactor_B)
 
+  #Get unique Proteins
+  tryCatch( {uniqueA <- unique(proteinData$IDs_interactor_A)
+  uniqueB <- unique(proteinData$IDs_interactor_B)}, error=function(e){
+    stop("Please enter a dataframe directly from the getProteinInteraction
+         Data() function")
+  } )
+
+  #Combine unique Proteins
   for(i in seq(from=1,to=nrow(proteinData),by=1)){
     proteinDataA[i] <- uniqueA[i]
   }
@@ -41,11 +60,4 @@ getUniqueProteins <- function(proteinData){
   totalProteins <- c(proteinDataA, proteinDataB)
 
   return(unique(totalProteins))
-}
-
-compareNumProteinInteractions <- function(){
-
-  counter <- 0
-  #this returns a pi chart showing similarity
-
 }

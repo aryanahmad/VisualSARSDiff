@@ -2,13 +2,16 @@
 #libraries added: igraph and PItools
 #TODO: Examples
 createProteinInteractionGraph <- function(proteinId){
-  #TODO: error handling
-  #Get data from the database
   #TODO: Include information about database and citation
-  #TODO: get custom queries
+
+  if(is.null(proteinId)){
+    stop("Please enter a proteinId")
+  }
+
 
   #Get the required data
   proteinDataCleaned <- getProteinInteractionData(proteinId)
+
 
   #Prepare the graph
   from <- c()
@@ -19,6 +22,7 @@ createProteinInteractionGraph <- function(proteinId){
   }
   graphFrame <- data.frame(from, to)
 
+
   #Plot the SINGULAR Protein-Protein Interaction Graph
   proteinInteractionGraph <- graph_from_data_frame(d=graphFrame,directed=F)
   degreePerNode <- degree(proteinInteractionGraph, mode="all")
@@ -27,17 +31,22 @@ createProteinInteractionGraph <- function(proteinId){
 }
 
 getProteinInteractionData <- function(proteinId){
-  #TODO: error handling
-  #Get data from the database
   #TODO: Include information about database and citation
+  if(is.null(proteinId)){
+    stop("Please enter a proteinId")
+  }
+
 
   #Build Query
   queryProtein <- paste("id:", proteinId, sep="")
   queryFinal <- paste(queryProtein, "*", sep="")
 
+
   #Call data
-  allData <- queryPSICQUICrlib(query = queryFinal, format = "tab25",
-                               database = "imex", directory = "./")
+  tryCatch( { allData <- queryPSICQUICrlib(query = queryFinal, format = "tab25",
+                               database = "imex", directory = "./") },
+            error= function(e) {stop("Please enter a valid ID")})
+
 
   #Clean Data, Attach to dataframe, and get rid of rows we do not need
   allDataCleaned <- cleanMITAB(allData)
