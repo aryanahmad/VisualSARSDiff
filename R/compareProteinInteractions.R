@@ -1,7 +1,14 @@
 #Add ggVennDiagram library
 
+#' Compare the Interactions of 2 Proteins, Using a Venn Diagram
+#'
+#' @param proteinOneID the ID of a protein
+#' @param proteinTwoID the optional ID of a second protein, will default to SARS-CoV-2 spike protein
+#' @return The sum of \code{x} and \code{y}.
+#' @examples
+#' compareProteinInteractions("P0DTC2","G1PXH7")
+#' compareProteinInteractions("G1PXH7")
 compareProteinInteractions <- function(proteinOneID, proteinTwoID = NULL){
-  #Get Needed Data
 
   if(proteinOneID == proteinTwoID){
     stop("You are comparing the same protein!")
@@ -32,7 +39,15 @@ compareProteinInteractions <- function(proteinOneID, proteinTwoID = NULL){
 
 }
 
-#Helper function
+
+#' Helper function for compareProteinInteractions().
+#' Condenses a large protein dataframe into unique protein interactions
+#'
+#' @param proteinData a dataframe of protein data from getProteinInteractionData()
+#' @return a list of unique proteins that this protein interacts with
+#' @examples
+#' x <- getProteinInteractionData("G1PXH7")
+#' getUniqueProteins(x)
 getUniqueProteins <- function(proteinData){
 
   if(is.null(proteinData)){
