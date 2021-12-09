@@ -17,7 +17,3 @@ The sum of \code{x} and \code{y}.
 \description{
 Compare the Interactions of 2 Proteins, Using a Venn Diagram
 }
-\examples{
-compareProteinInteractions("P0DTC2","G1PXH7")
-compareProteinInteractions("G1PXH7")
-}

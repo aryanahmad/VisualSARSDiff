@@ -1,18 +1,13 @@
 
-#libraries added: igraph and PItools
-
 #' Creates and outputs a Protein-Protein Interaction Graph
 #'
 #' @param proteinId the protein ID
-#' @examples
-#' createProteinInteractionGraph("G1PXH7")
 createProteinInteractionGraph <- function(proteinId){
   #TODO: Include information about database and citation
 
   if(is.null(proteinId)){
     stop("Please enter a proteinId")
   }
-
 
   #Get the required data
   proteinDataCleaned <- getProteinInteractionData(proteinId)
@@ -40,9 +35,6 @@ createProteinInteractionGraph <- function(proteinId){
 #' using a call to the IMEX database. No graphical output.
 #'
 #' @param proteinId the protein ID
-#' @examples
-#' getProteinInteractionData("G1PXH7")
-
 getProteinInteractionData <- function(proteinId){
   #TODO: Include information about database and citation
   if(is.null(proteinId)){

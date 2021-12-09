@@ -5,9 +5,6 @@
 #' @param proteinOneID the ID of a protein
 #' @param proteinTwoID the optional ID of a second protein, will default to SARS-CoV-2 spike protein
 #' @return The sum of \code{x} and \code{y}.
-#' @examples
-#' compareProteinInteractions("P0DTC2","G1PXH7")
-#' compareProteinInteractions("G1PXH7")
 compareProteinInteractions <- function(proteinOneID, proteinTwoID = NULL){
 
   if(proteinOneID == proteinTwoID){
@@ -45,9 +42,6 @@ compareProteinInteractions <- function(proteinOneID, proteinTwoID = NULL){
 #'
 #' @param proteinData a dataframe of protein data from getProteinInteractionData()
 #' @return a list of unique proteins that this protein interacts with
-#' @examples
-#' x <- getProteinInteractionData("G1PXH7")
-#' getUniqueProteins(x)
 getUniqueProteins <- function(proteinData){
 
   if(is.null(proteinData)){

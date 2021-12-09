@@ -14,6 +14,3 @@ getProteinInteractionData(proteinId)
 Returns a dataframe of all possible protein-protein interactions
 using a call to the IMEX database. No graphical output.
 }
-\examples{
-getProteinInteractionData("G1PXH7")
-}

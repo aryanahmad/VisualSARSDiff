@@ -12,6 +12,3 @@ createProteinInteractionGraph(proteinId)
 \description{
 Creates and outputs a Protein-Protein Interaction Graph
 }
-\examples{
-createProteinInteractionGraph("G1PXH7")
-}

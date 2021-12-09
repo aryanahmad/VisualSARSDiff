@@ -17,7 +17,3 @@ a list of unique proteins that this protein interacts with
 Helper function for compareProteinInteractions().
 Condenses a large protein dataframe into unique protein interactions
 }
-\examples{
-x <- getProteinInteractionData("G1PXH7")
-getUniqueProteins(x)
-}
