@@ -10,12 +10,10 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
 Imports: 
-    Biostrings,
     ggVennDiagram,
     igraph,
     PItools,
     shiny,
-    seqinr
 Depends: 
     R (>= 2.10)
 Suggests: 

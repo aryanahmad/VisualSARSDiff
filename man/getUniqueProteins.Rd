@@ -17,3 +17,6 @@ a list of unique proteins that this protein interacts with
 Helper function for compareProteinInteractions().
 Condenses a large protein dataframe into unique protein interactions
 }
+\references{
+Altfeld, J. (2021, October 24). Error handling in R with trycatchlog: Catching, logging, post-mortem analysis. CRAN. Retrieved December 9, 2021, from https://cran.r-project.org/web/packages/tryCatchLog/vignettes/tryCatchLog-intro.html.
+}

@@ -11,9 +11,9 @@ compareProteinInteractions(proteinOneID, proteinTwoID = NULL)
 
 \item{proteinTwoID}{the optional ID of a second protein, will default to SARS-CoV-2 spike protein}
 }
-\value{
-The sum of \code{x} and \code{y}.
-}
 \description{
 Compare the Interactions of 2 Proteins, Using a Venn Diagram
+}
+\references{
+Gao, C.-H. (2021, October 22). A 'ggplot2' implement of Venn diagram. The Comprehensive R Archive Network. Retrieved from https://cran.r-project.org/web/packages/ggVennDiagram/.
 }

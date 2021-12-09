@@ -12,3 +12,7 @@ createProteinInteractionGraph(proteinId)
 \description{
 Creates and outputs a Protein-Protein Interaction Graph
 }
+\references{
+Ognyanova, K. (n.d.). Network analysis and visualization with R and igraph. Kateto. Retrieved December 9, 2021, from https://kateto.net/netscix2016.html.
+Protein interaction data tools: Retrieving data from intact and most other databases using PSICQUIC service. PItools. (n.d.). Retrieved from https://vitkl.github.io/PItools/index.html.
+}

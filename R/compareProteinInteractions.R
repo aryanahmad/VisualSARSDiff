@@ -4,7 +4,8 @@
 #'
 #' @param proteinOneID the ID of a protein
 #' @param proteinTwoID the optional ID of a second protein, will default to SARS-CoV-2 spike protein
-#' @return The sum of \code{x} and \code{y}.
+#' @references
+#' Gao, C.-H. (2021, October 22). A 'ggplot2' implement of Venn diagram. The Comprehensive R Archive Network. Retrieved from https://cran.r-project.org/web/packages/ggVennDiagram/.
 compareProteinInteractions <- function(proteinOneID, proteinTwoID = NULL){
 
   if(proteinOneID == proteinTwoID){
@@ -42,6 +43,8 @@ compareProteinInteractions <- function(proteinOneID, proteinTwoID = NULL){
 #'
 #' @param proteinData a dataframe of protein data from getProteinInteractionData()
 #' @return a list of unique proteins that this protein interacts with
+#' @references
+#' Altfeld, J. (2021, October 24). Error handling in R with trycatchlog: Catching, logging, post-mortem analysis. CRAN. Retrieved December 9, 2021, from https://cran.r-project.org/web/packages/tryCatchLog/vignettes/tryCatchLog-intro.html.
 getUniqueProteins <- function(proteinData){
 
   if(is.null(proteinData)){

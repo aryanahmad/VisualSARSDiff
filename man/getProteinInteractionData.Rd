@@ -14,3 +14,7 @@ getProteinInteractionData(proteinId)
 Returns a dataframe of all possible protein-protein interactions
 using a call to the IMEX database. No graphical output.
 }
+\references{
+Altfeld, J. (2021, October 24). Error handling in R with trycatchlog: Catching, logging, post-mortem analysis. CRAN. Retrieved December 9, 2021, from https://cran.r-project.org/web/packages/tryCatchLog/vignettes/tryCatchLog-intro.html.
+Protein interaction data tools: Retrieving data from intact and most other databases using PSICQUIC service. PItools. (n.d.). Retrieved from https://vitkl.github.io/PItools/index.html.
+}

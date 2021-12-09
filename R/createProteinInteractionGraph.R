@@ -2,8 +2,10 @@
 #' Creates and outputs a Protein-Protein Interaction Graph
 #'
 #' @param proteinId the protein ID
+#' @references
+#' Ognyanova, K. (n.d.). Network analysis and visualization with R and igraph. Kateto. Retrieved December 9, 2021, from https://kateto.net/netscix2016.html.
+#' Protein interaction data tools: Retrieving data from intact and most other databases using PSICQUIC service. PItools. (n.d.). Retrieved from https://vitkl.github.io/PItools/index.html.
 createProteinInteractionGraph <- function(proteinId){
-  #TODO: Include information about database and citation
 
   if(is.null(proteinId)){
     stop("Please enter a proteinId")
@@ -35,8 +37,10 @@ createProteinInteractionGraph <- function(proteinId){
 #' using a call to the IMEX database. No graphical output.
 #'
 #' @param proteinId the protein ID
+#' @references
+#' Altfeld, J. (2021, October 24). Error handling in R with trycatchlog: Catching, logging, post-mortem analysis. CRAN. Retrieved December 9, 2021, from https://cran.r-project.org/web/packages/tryCatchLog/vignettes/tryCatchLog-intro.html.
+#' Protein interaction data tools: Retrieving data from intact and most other databases using PSICQUIC service. PItools. (n.d.). Retrieved from https://vitkl.github.io/PItools/index.html.
 getProteinInteractionData <- function(proteinId){
-  #TODO: Include information about database and citation
   if(is.null(proteinId)){
     stop("Please enter a proteinId")
   }
