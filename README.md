@@ -37,7 +37,7 @@ Before getting started, please ensure all required libraries are installed.
 ls("package:VisualSARSDiff")
 ```
 
-(image)
+![](./inst/extdata/hierarchy.png)
 
 ## Contributions
 
