@@ -43,13 +43,16 @@ pairwiseSpike uses other packages from seqinR and Biostrings
 
 ## References
 
-Coghlan, A. (n.d.). Welcome to a little book of R for bioinformatics! — bioinformatics 0.1 documentation. Readthedocs.Io. Retrieved November 22, 2021, from https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/index.html
+Gao, C.-H. (2021, October 22). A 'ggplot2' implement of Venn diagram [R package ggvenndiagram version 1.2.0]. The Comprehensive R Archive Network. Retrieved from https://cran.r-project.org/web/packages/ggVennDiagram/. 
 
-Spike glycoprotein. (n.d.-a). Uniprot.Org. Retrieved November 22, 2021, from https://www.uniprot.org/uniprot/K9N5Q8
+Huang Y;Yang C;Xu XF;Xu W;Liu SW; (n.d.). Structural and functional properties of SARS-COV-2 spike protein: Potential antivirus drug development for covid-19. Acta pharmacologica Sinica. Retrieved from https://pubmed.ncbi.nlm.nih.gov/32747721/. 
+
+Ognyanova, K. (n.d.). Network analysis and visualization with R and igraph. Kateto. Retrieved December 9, 2021, from https://kateto.net/netscix2016.html. 
+
+Protein interaction data tools: Retrieving data from intact and most other databases using PSICQUIC service. PItools. (n.d.). Retrieved from https://vitkl.github.io/PItools/index.html. 
 
 Spike glycoprotein. (n.d.-b). Uniprot.Org. Retrieved November 22, 2021, from https://www.uniprot.org/uniprot/P0DTC2
 
-Stevens, T. J., & Boucher, W. (2015). Pairwise sequence alignments. In Python Programming for Biology (pp. 208–231). Cambridge University Press.
 
 
 ## Acknowledgements

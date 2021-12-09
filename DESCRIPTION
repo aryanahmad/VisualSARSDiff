@@ -14,6 +14,7 @@ Imports:
     ggVennDiagram,
     igraph,
     PItools,
+    shiny,
     seqinr
 Depends: 
     R (>= 2.10)
