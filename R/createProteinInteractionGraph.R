@@ -42,6 +42,7 @@ createProteinInteractionGraph <- function(proteinId){
 #' @param proteinId the protein ID
 #' @examples
 #' getProteinInteractionData("G1PXH7")
+
 getProteinInteractionData <- function(proteinId){
   #TODO: Include information about database and citation
   if(is.null(proteinId)){

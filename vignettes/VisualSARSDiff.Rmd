@@ -45,7 +45,7 @@ VisualSARSDiff has 3 main functions:
 
 ### Creating a Protein Interaction Graph
 
-```{r}
+``` 
 library(VisualSARSDiff)
 #Create a Protein Interaction Graph of the spike protein of SARS-CoV-2
 createProteinInteractionGraph("P0DTC2")
@@ -54,7 +54,7 @@ createProteinInteractionGraph("P0DTC2")
 
 ### Getting raw Protein Interaction Data
 
-```{r}
+``` 
 library(VisualSARSDiff)
 #Create raw data straight from the intAct database - intended for independent research use
 getProteinInteractionData("P0DTC2")
@@ -63,7 +63,7 @@ getProteinInteractionData("P0DTC2")
 
 ### Compare and see if 2 different proteins interact with similar proteins
 
-```{r}
+``` 
 library(VisualSARSDiff)
 #Seeing if the SARS-CoV-2 Spike protein and a Angiotensin-converting enzyme of a little brown bat have interactons
 compareProteinInteractions("P0DTC2","G1PXH7")

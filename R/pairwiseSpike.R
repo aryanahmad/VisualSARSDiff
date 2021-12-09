@@ -31,5 +31,5 @@
 #'   spike2String <- c2s(spike2Sequence)
 #'
 #'   pairwiseAlignment(spike1String, spike2String, scoreOnly = scoreCheck)
-}
+#}
 
