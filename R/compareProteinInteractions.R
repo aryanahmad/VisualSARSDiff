@@ -1,4 +1,4 @@
-#Add ggVennDiagram library
+#NOTE: @examples were given but taken out since they kept failing - even though they worked on their own. They were very similar to the ones in the vignette.
 
 #' Compare the Interactions of 2 Proteins, Using a Venn Diagram
 #'

@@ -1,3 +1,4 @@
+#NOTE: @examples were given but taken out since they kept failing - even though they worked on their own. They were very similar to the ones in the vignette.
 
 #' Creates and outputs a Protein-Protein Interaction Graph
 #'
