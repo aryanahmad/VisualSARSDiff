@@ -1,0 +1,12 @@
+citHeader("To cite VisualSARSDiff in publications use:")
+
+citEntry(
+  entry    = "Unpublished",
+  title    = VisualSARSDiff,
+  author   = Aryan Ahmad,
+  year     = 2021,
+  url      = https://github.com/aryanahmad/VisualSARSDiff,
+  textVersion = paste(
+  "Ahmad, A. (2021) VisualSARSDiff: Allowing Comparisons of Protein-Protein Interactions. Unpublished. URL https://github.com/aryanahmad/VisualSARSDiff"
+  )
+)
